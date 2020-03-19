@@ -36,16 +36,19 @@ json_recovered = produce_json_from_url(url_recovered)
 json_countries = produce_list_of_countries(url_deaths)
 
 
-with open('json_deaths.json', 'w') as outfile:
-    json.dump(json_deaths, outfile)
+file_deaths = open("json_deaths.json","w") 
+file_deaths.write(json_deaths)
+file_deaths.close() 
 
-with open('json_confirmed.json', 'w') as outfile:
-    json.dump(json_confirmed, outfile)
+file_confirmed = open("json_confirmed.json","w") 
+file_confirmed.write(json_confirmed)
+file_confirmed.close() 
 
-with open('json_recovered.json', 'w') as outfile:
-    json.dump(json_recovered, outfile)
+file_recovered = open("json_recovered.json","w") 
+file_recovered.write(json_recovered)
+file_recovered.close() 
 
-with open('json_countries.json', 'w') as outfile:
-    json.dump(json_countries, outfile)
-
+file_countries = open("json_countries.json","w") 
+file_countries.write(json_countries)
+file_countries.close() 
 
