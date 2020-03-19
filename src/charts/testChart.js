@@ -104,16 +104,16 @@ export default class Example extends PureComponent {
             type="monotone"
             dataKey="CzechRepublic"
             stroke="#8884d8"
-            activeDot={{ r: 8 }}
-            strokeWidth={5}
+            activeDot={{ r: 3 }}
+            strokeWidth={2}
           />
           <Line
             isAnimationActive={false}
             type="monotone"
             dataKey="Poland"
             stroke="#82ca9d"
-            strokeWidth={5}
-            activeDot={{ r: 8 }}
+            strokeWidth={2}
+            activeDot={{ r: 3 }}
           />
         </LineChart>
       </ResponsiveContainer>

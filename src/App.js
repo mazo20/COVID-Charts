@@ -4,10 +4,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import Example from "./charts/testChart";
 
-import { Container, Col, Row } from "react-bootstrap";
-import Sidebar from "react-sidebar";
+import { Container, Col, Row, ListGroup } from "react-bootstrap";
 
 import CVNavbar from "./components/navbar";
+import Sidebar from "./components/sidebar";
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
           margin: 200
         }}
       ></div>
-      <Sidebar sidebar={<b>Wojtek debil</b>} docked={true} styles={{ root: { top: 52 } }}>
+      <Sidebar>
         <h1
           style={{
             margin: 20
@@ -27,16 +27,32 @@ function App() {
           Poland
         </h1>
         <Container
-          fluid="sm"
           style={{
             marginTop: 100
           }}
         >
-          <Col>
-            <Example></Example>
-            <Example></Example>
-            <Example></Example>
-          </Col>
+          <Row>
+            <Col>
+              <Example></Example>
+            </Col>
+            <Col>
+              <Example></Example>
+            </Col>
+            <Col>
+              <Example></Example>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <Example></Example>
+            </Col>
+            <Col>
+              <Example></Example>
+            </Col>
+            <Col>
+              <Example></Example>
+            </Col>
+          </Row>
         </Container>
       </Sidebar>
     </div>
