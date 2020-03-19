@@ -1,24 +1,44 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+
+import Example from "./charts/testChart";
+
+import { Container, Col, Row } from "react-bootstrap";
+import Sidebar from "react-sidebar";
+
+import CVNavbar from "./components/navbar";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+      <CVNavbar></CVNavbar>
+      <div
+        style={{
+          margin: 200
+        }}
+      ></div>
+      <Sidebar sidebar={<b>Wojtek debil</b>} docked={true} styles={{ root: { top: 52 } }}>
+        <h1
+          style={{
+            margin: 20
+          }}
         >
-          Learn React
-        </a>
-      </header>
+          Poland
+        </h1>
+        <Container
+          fluid="sm"
+          style={{
+            marginTop: 100
+          }}
+        >
+          <Col>
+            <Example></Example>
+            <Example></Example>
+            <Example></Example>
+          </Col>
+        </Container>
+      </Sidebar>
     </div>
   );
 }
